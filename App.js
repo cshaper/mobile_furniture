@@ -9,6 +9,7 @@ import {
   } from "@expo-google-fonts/roboto";
 import { useCallback } from "react";
 import * as SplashScreen from 'expo-splash-screen';
+import BottomTabs from "./src/screens/BottomTabs";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -36,7 +37,7 @@ export default function App() {
   return (
     <NavigationContainer onReady={onLayoutRootView}>
       <Stack.Navigator>
-        <Stack.Screen name="HomeScreen" component={HomeScreen} />
+        <Stack.Screen name="BottomTabs" component={BottomTabs} options={{headerShown:false}}/>
         <Stack.Screen name="ProductList" component={ProductList} />
       </Stack.Navigator>
     </NavigationContainer>
